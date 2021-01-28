@@ -9,11 +9,12 @@ class CountryAsset extends AssetBundle
     public $sourcePath = '@app/assets';
 
     public $css = [
+        'css/simplebar.css',
         'css/country.css',
     ];
     public $js = [
-        'js/jquery.slimscroll.min.js',
         'js/main.js',
+        'js/simplebar.js',
     ];
 
     public $depends = [];

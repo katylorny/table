@@ -23,7 +23,7 @@ $this->title = 'Countries';
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <div class="country-wrapper">
+    <div class="country-wrapper" data-simplebar-auto-hide="false" data-simplebar>
         <?= GridView::widget([
             'dataProvider' => new $dataProvider([
                 'query'      =>$searchModel::find(),

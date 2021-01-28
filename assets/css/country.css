@@ -1,28 +1,36 @@
-body {
-    background-color: blue !important;
+.country-wrapper {
+    height: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.country-wrapper .summary {
+    display: none;
 }
 
 .country-wrapper table {
-    width: 100%;
-    background-color: #f3f3f3;
+    margin: 0;
 }
-.country-wrapper table tbody {
-    height: 200px;
-    overflow-y: auto;
-    width: 100%;
-}
-.country-wrapper table thead,
-.country-wrapper table tbody,
-.country-wrapper table tr,
-.country-wrapper table td,
+
 .country-wrapper table th {
-    display: block;
+    position: sticky;
+    top: -1px;
+    z-index: 20;
+    background-color: #ccc;
 }
-.country-wrapper table tbody td {
-    float: left;
+
+.country-wrapper .simplebar-scrollbar::before {
+    background-color: red;
 }
-.country-wrapper table thead tr th {
-    float: left;
-    background-color: #f39c12;
-    border-color: #e67e22;
+
+.country-wrapper .simplebar-track {
+    background-color: blue;
+}
+
+.country-wrapper .simplebar-track.simplebar-vertical {
+    top: 37px;
+}
+
+.country-wrapper [data-simplebar] {
+    z-index: 22;
 }
