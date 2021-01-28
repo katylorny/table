@@ -1,5 +1,6 @@
 <?php
 
+use app\assets\CountryAsset;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -7,6 +8,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CountrySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+CountryAsset::register($this);
 
 $this->title = 'Countries';
 /*$this->params['breadcrumbs'][] = $this->title;*/
@@ -21,19 +23,22 @@ $this->title = 'Countries';
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        /*'filterModel' => $searchModel,*/
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    <div class="country-wrapper">
+        <?= GridView::widget([
+            'dataProvider' => new $dataProvider([
+                'query'      =>$searchModel::find(),
+                'pagination' => false,
+            ]),
+            /*'filterModel' => $searchModel,*/
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
 
-            /*'id',*/
-            'name',
-            'age',
+                /*'id',*/
+                'name',
+                'age',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-
+                ['class' => 'yii\grid\ActionColumn'],
+            ],
+        ]); ?>
+    </div>
 </div>

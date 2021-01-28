@@ -1,3 +1,28 @@
 body {
-    background-color: red !important;
+    background-color: blue !important;
+}
+
+.country-wrapper table {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+.country-wrapper table tbody {
+    height: 200px;
+    overflow-y: auto;
+    width: 100%;
+}
+.country-wrapper table thead,
+.country-wrapper table tbody,
+.country-wrapper table tr,
+.country-wrapper table td,
+.country-wrapper table th {
+    display: block;
+}
+.country-wrapper table tbody td {
+    float: left;
+}
+.country-wrapper table thead tr th {
+    float: left;
+    background-color: #f39c12;
+    border-color: #e67e22;
 }
