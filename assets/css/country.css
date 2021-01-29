@@ -1,7 +1,11 @@
 .country-wrapper {
-    height: 500px;
+    height: 350px;
     overflow-y: auto;
     position: relative;
+    /*border-bottom: 1px solid #ddd;*/
+    border-radius: 8px;
+    box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.2);
+    color: #898A86;
 }
 
 .country-wrapper .summary {
@@ -16,7 +20,17 @@
     position: sticky;
     top: -1px;
     z-index: 20;
-    background-color: #ccc;
+    background-color: #6C7AE0;
+    color: white;
+}
+
+.country-wrapper table td {
+    color: #898A86;
+    border-color: transparent;
+}
+
+.country-wrapper table th a {
+    color: white;
 }
 
 .country-wrapper .simplebar-scrollbar::before {
@@ -24,13 +38,38 @@
 }
 
 .country-wrapper .simplebar-track {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .country-wrapper .simplebar-track.simplebar-vertical {
-    top: 37px;
+    top: 40px;
 }
 
 .country-wrapper [data-simplebar] {
     z-index: 22;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    left: 0;
+    right: 0;
+    /*height: 100px;*/
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 7px;
+    right: 1px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #F8F6FF;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: none !important;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: none !important;
+    padding-left: 37px !important;
 }
